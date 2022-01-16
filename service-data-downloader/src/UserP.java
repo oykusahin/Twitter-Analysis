@@ -7,7 +7,6 @@ public class UserP {
 
 	/*
 	 * Parameters to be stored in the UserP object
-	 * 
 	 * */
 	private boolean isProtected;
 	private String eMail;
@@ -42,7 +41,6 @@ public class UserP {
 		profileDescription=user.getDescription();
 	}
 	
-	//TODO: Discuss to eliminate the verified users.
 	public void toFile() {
 		getUserID();
 		getName();
