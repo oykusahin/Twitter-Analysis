@@ -36,8 +36,7 @@ public void getHashtag(String searchTerm, String queryTask){
 		q.setCount(100);
 		q.setSince("2010-1-1");
 		q.setLang("tr");
-	
-		
+        
 		//Begins to retrieve data of the hashtag owners
 		try{
 			QueryResult result = twitter.search(q);
@@ -73,7 +72,6 @@ public void getHashtag(String searchTerm, String queryTask){
 				//Stores and prints the data to the secondary file by passing the symbol table to FriendsP class
 				getFriendsP();
 			}
-			
 			else if ( queryTask == "getFollowers") {
 				//Stores and prints the data to the secondary file by passing the symbol table to FollowersP class
 				getFollowersP();
@@ -87,7 +85,6 @@ public void getHashtag(String searchTerm, String queryTask){
 
 
 void getFollowersP() {
-
 	//passes the parameters of symbol table with the hashtag owner IDs, the size of the symbol table and twitter to the FollowersP class.
 	//returns the IDs of followers in an ArrayList to pass to the mainDriver
 	fol.getUserInfo(stUser, stUser.size(), twitter);
